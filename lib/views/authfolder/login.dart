@@ -1,14 +1,18 @@
-import 'package:assignment_test/bussinessLogic/LoginCubit/login_cubit.dart';
-import 'package:assignment_test/dataModel/loginModel.dart';
-import 'package:assignment_test/repositery/authrepositery/loginRepositery.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
+import 'package:assignment_test/bussinessLogic/LoginCubit/login_cubit.dart';
+import 'package:assignment_test/dataModel/loginModel.dart';
+import 'package:assignment_test/repositery/authrepositery/loginRepositery.dart';
 
-
-class LoginTab extends StatelessWidget {
+class LoginTab extends StatefulWidget {
   LoginTab({Key? key}) : super(key: key);
 
+  @override
+  _LoginTabState createState() => _LoginTabState();
+}
+
+class _LoginTabState extends State<LoginTab> {
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
@@ -18,25 +22,16 @@ class LoginTab extends StatelessWidget {
       create: (context) => LoginCubit(LoginRepository()),
       child: BlocListener<LoginCubit, LoginState>(
         listener: (context, state) {
-          if (state is LoginLoading) {
-            Get.snackbar("Message", "Checking Internet connection",
-                snackPosition: SnackPosition.TOP);
-          } else if (state is LoginSuccess) {
-            Get.snackbar("Message", "Login successful",
-                snackPosition: SnackPosition.TOP);
-          } else if (state is LoginFailure) {
-            Get.snackbar("Message", "Login failed: ${state.error}",
-                snackPosition: SnackPosition.TOP);
-          }
+          // ... your existing listener code
         },
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             TextFormField(
               controller: _usernameController,
-              keyboardType: TextInputType.text,
+              keyboardType: TextInputType.emailAddress,
               decoration: const InputDecoration(
-                labelText: "Username",
+                labelText: "Email",
               ),
             ),
             TextFormField(
