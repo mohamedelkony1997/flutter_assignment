@@ -1,10 +1,10 @@
-import 'package:assignment_test/views/itemsdetails/ItemDetailsPage.dart';
+import 'package:assignment_test/bussinessLogic/itemsCubit/items_cubit.dart';
+import 'package:assignment_test/bussinessLogic/itemsCubit/items_state.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:assignment_test/bussinessLogic/cubit/items_state.dart';
-import 'package:assignment_test/bussinessLogic/items_cubit.dart';
-import 'package:assignment_test/dataModel/itemsModel.dart';
-import 'package:assignment_test/repositery/items/itemsRepositery.dart';
+
+
 import 'package:get/get.dart';
 
 class ItemsTabView extends StatelessWidget {

@@ -1,4 +1,4 @@
-// loginModel.dart
+
 class Login {
   final String username;
   final String password;

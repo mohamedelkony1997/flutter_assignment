@@ -1,9 +1,10 @@
+import 'package:assignment_test/bussinessLogic/LoginCubit/login_cubit.dart';
 import 'package:assignment_test/dataModel/loginModel.dart';
 import 'package:assignment_test/repositery/authrepositery/loginRepositery.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
-import '../../bussinessLogic/cubit/login_cubit.dart';
+
 
 class LoginTab extends StatelessWidget {
   LoginTab({Key? key}) : super(key: key);

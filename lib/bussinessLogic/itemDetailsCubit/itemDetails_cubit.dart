@@ -1,7 +1,7 @@
-import 'package:assignment_test/bussinessLogic/cubit/itemDetails_state.dart';
+
+import 'package:assignment_test/bussinessLogic/itemDetailsCubit/itemDetails_state.dart';
 import 'package:assignment_test/repositery/itemsdetails/ItemsdetailsRepositery.dart';
 import 'package:bloc/bloc.dart';
-import 'package:equatable/equatable.dart';
 
 
 class ItemDetailsCubit extends Cubit<ItemDetailsState> {

@@ -1,13 +1,15 @@
-import 'package:assignment_test/bussinessLogic/cubit/login_cubit.dart';
 
-import 'package:assignment_test/bussinessLogic/items_cubit.dart';
+import 'package:assignment_test/bussinessLogic/LoginCubit/login_cubit.dart';
+import 'package:assignment_test/bussinessLogic/itemsCubit/items_cubit.dart';
+
+
 import 'package:assignment_test/views/itemsdetails/ItemDetailsPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:assignment_test/repositery/authrepositery/loginRepositery.dart';
 import 'package:assignment_test/repositery/items/itemsRepositery.dart';
 import 'package:get/get.dart';
-import 'views/fix.dart';
+import 'views/fix/fix.dart';
 import 'views/items/items.dart';
 import 'views/authfolder/login.dart';
 
@@ -66,7 +68,6 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
       });
     });
 
-    // Load items automatically when the page is shown
     context.read<ItemsCubit>().loadItems();
   }
 

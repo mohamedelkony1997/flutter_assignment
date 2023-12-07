@@ -1,11 +1,13 @@
-import 'package:assignment_test/bussinessLogic/cubit/itemDetails_state.dart';
+
+import 'package:assignment_test/bussinessLogic/itemDetailsCubit/itemDetails_cubit.dart';
+import 'package:assignment_test/bussinessLogic/itemDetailsCubit/itemDetails_state.dart';
 import 'package:assignment_test/dataModel/itemsModel.dart';
 import 'package:assignment_test/repositery/itemsdetails/ItemsdetailsRepositery.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 
-import '../../bussinessLogic/cubit/itemDetails_cubit.dart';
+
 
 class ItemDetailsPage extends StatelessWidget {
 
@@ -68,7 +70,7 @@ class ItemDetailsView extends StatelessWidget {
         Text('Name: ${itemDetails.name}'),
         Text('Price: ${itemDetails.price}\$'),
           Text('Type: ${itemDetails.type}'),
-        // Add more details as needed.
+    
       ],
     );
   }

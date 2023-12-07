@@ -3,7 +3,7 @@ class ItemModel {
   final String name;
   final String price;
   final String image;
-  final List<String> related; // Add the 'related' field
+  final List<String> related; 
   final String type;
 
   ItemModel({
